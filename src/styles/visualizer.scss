@@ -1,0 +1,12 @@
+$total-elements: 200;
+$time: 0.01s;
+
+.array-container.fullySorted > div.array-bar {
+  @for $i from 0 through $total-elements {
+    &:nth-child(#{$i}) {
+      background-color: #2ecc71;
+      transition: background-color $time;
+      transition-delay: $time * $i;
+    }
+  }
+}

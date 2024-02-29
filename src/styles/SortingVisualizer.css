@@ -1,0 +1,240 @@
+.sorting-visualizer {
+  width: 70vw;
+  min-width: 600px;
+
+  background-image: repeating-linear-gradient(
+      0deg,
+      #333333,
+      #333333 14px,
+      transparent 14px,
+      transparent 27px,
+      #333333 27px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #333333,
+      #333333 14px,
+      transparent 14px,
+      transparent 27px,
+      #333333 27px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #333333,
+      #333333 14px,
+      transparent 14px,
+      transparent 27px,
+      #333333 27px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      #333333,
+      #333333 14px,
+      transparent 14px,
+      transparent 27px,
+      #333333 27px
+    );
+  background-size: 2px calc(100% + 27px), calc(100% + 27px) 2px,
+    2px calc(100% + 27px), calc(100% + 27px) 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+
+  padding: 1rem 2rem;
+  min-height: 13rem;
+
+  display: flex;
+  flex-direction: row;
+  /* place items on bottom */
+  align-items: flex-end;
+}
+
+.array-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* gap: 1px; */
+  margin-bottom: 15px;
+}
+
+.sorting-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 50%;
+}
+
+.sorting-desc-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sorting-desc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  white-space: nowrap;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.array-bar {
+  width: 100%;
+  max-width: 10px;
+  background-color: #3498db;
+  transition: height 0.1s;
+}
+
+.sorting-desc.btn {
+  all: unset;
+  padding: 10px 20px;
+  background-color: #333333;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.sorting-desc.btn:hover {
+  background-color: #595959;
+}
+
+.sorting-desc.btn:disabled {
+  background-color: #2b313a80;
+  cursor: not-allowed;
+}
+
+.array-bar.sorted {
+  background-color: #f1c40f;
+}
+
+.time-taken {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2ecc71;
+
+  text-shadow: 0px -2px 101px rgba(46, 204, 113, 0.26),
+    0px -0.835552px 42.1954px rgba(46, 204, 113, 0.186902),
+    0px -0.446726px 22.5597px rgba(46, 204, 113, 0.154988),
+    0px -0.250431px 12.6468px rgba(46, 204, 113, 0.13),
+    0px -0.133002px 6.7166px rgba(46, 204, 113, 0.105012),
+    0px -0.0553451px 2.79493px rgba(46, 204, 113, 0.0730979);
+  span {
+    font-weight: 600;
+  }
+}
+
+.tooltip {
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #2ecc71;
+  color: #0f1114;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -70px;
+}
+
+@media screen and (max-width: 670px) {
+  .sorting-visualizer {
+    flex-direction: column;
+  }
+  .sorting-desc {
+    width: 100%;
+    flex-direction: row;
+    padding: 1rem 0;
+  }
+  .sorting-desc-buttons {
+    width: 50%;
+  }
+  .sorting-desc-info {
+    width: 50%;
+
+    h2 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  .sorting-visualizer {
+    width: 70vw;
+    min-width: 375px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sorting-visualizer {
+    flex-direction: column;
+    width: 70vw;
+    min-width: 275px;
+  }
+  .sorting-desc {
+    flex-direction: column;
+  }
+  .sorting-desc-info {
+    width: 100%;
+    h2 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  .sorting-desc-buttons {
+    flex-direction: row;
+    width: 100%;
+  }
+  .sorting-desc.btn {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+}

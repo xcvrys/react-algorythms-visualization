@@ -21,18 +21,18 @@ function App() {
     },
     QuickSort: {
       title: "Quick Sort",
-      timeComplexity: "O(n<sup>2</sup>)",
-      spaceComplexity: "<i>O(1)</i>",
+      timeComplexity: "O(nlogn)",
+      spaceComplexity: "O(logn)",
     },
     MergeSort: {
       title: "Merge Sort",
-      timeComplexity: "O(n<sup>2</sup>)",
+      timeComplexity: "O(nlogn)",
       spaceComplexity: "O(n)",
     },
     HeapSort: {
       title: "Heap Sort",
       timeComplexity: "O(n log n)",
-      spaceComplexity: "O(1)",
+      spaceComplexity: "O(n)",
     },
     SelectionSort: {
       title: "Selection Sort",
@@ -101,7 +101,7 @@ function App() {
     },
     BinaryTreeSort: {
       title: "Binary Tree Sort",
-      timeComplexity: "O(n log n)",
+      timeComplexity: "O(nlogn)",
       spaceComplexity: "O(n)",
     },
   };

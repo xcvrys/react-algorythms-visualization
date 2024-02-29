@@ -1,6 +1,6 @@
 ## Test screen
 
-![screen](https://i.imgur.com/vOrnhFx.png)
+![screen](https://i.imgur.com/WffGY7N.png)
 
 # React + TypeScript + Vite
 

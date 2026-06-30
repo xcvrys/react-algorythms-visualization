@@ -10,13 +10,10 @@ import { shellSort } from "./shell";
 import { radixSort } from "./radix";
 import { bogoSort } from "./bogo";
 import { combSort } from "./comb";
-import { countingSort } from "./counting";
 import { gnomeSort } from "./gnome";
 import { oddEvenSort } from "./oddEven";
 import { cycleSort } from "./cycle";
-import { pigeonholeSort } from "./pigeonhole";
 import { pancakeSort } from "./pancake";
-import { binaryTreeSort } from "./binaryTree";
 
 export {
   bubbleSort,
@@ -30,13 +27,10 @@ export {
   radixSort,
   bogoSort,
   combSort,
-  countingSort,
   gnomeSort,
   oddEvenSort,
   cycleSort,
-  pigeonholeSort,
   pancakeSort,
-  binaryTreeSort,
 };
 
 export const ALGORITHMS = {
@@ -100,12 +94,6 @@ export const ALGORITHMS = {
     spaceComplexity: "O(1)",
     fn: combSort,
   },
-  CountingSort: {
-    title: "Counting Sort",
-    timeComplexity: "O(n+k)",
-    spaceComplexity: "O(n+k)",
-    fn: countingSort,
-  },
   GnomeSort: {
     title: "Gnome Sort",
     timeComplexity: "O(n²)",
@@ -124,23 +112,11 @@ export const ALGORITHMS = {
     spaceComplexity: "O(1)",
     fn: cycleSort,
   },
-  PigeonholeSort: {
-    title: "Pigeonhole Sort",
-    timeComplexity: "O(n+k)",
-    spaceComplexity: "O(n+k)",
-    fn: pigeonholeSort,
-  },
   PancakeSort: {
     title: "Pancake Sort",
     timeComplexity: "O(n²)",
     spaceComplexity: "O(1)",
     fn: pancakeSort,
-  },
-  BinaryTreeSort: {
-    title: "Binary Tree Sort",
-    timeComplexity: "O(n log n)",
-    spaceComplexity: "O(n)",
-    fn: binaryTreeSort,
   },
   BogoSort: {
     title: "Bogo Sort",

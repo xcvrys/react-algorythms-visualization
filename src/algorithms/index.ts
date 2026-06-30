@@ -94,12 +94,6 @@ export const ALGORITHMS = {
     spaceComplexity: "O(n+k)",
     fn: radixSort,
   },
-  BogoSort: {
-    title: "Bogo Sort",
-    timeComplexity: "O((n+1)!)",
-    spaceComplexity: "O(1)",
-    fn: bogoSort,
-  },
   CombSort: {
     title: "Comb Sort",
     timeComplexity: "O(n²)",
@@ -147,6 +141,12 @@ export const ALGORITHMS = {
     timeComplexity: "O(n log n)",
     spaceComplexity: "O(n)",
     fn: binaryTreeSort,
+  },
+  BogoSort: {
+    title: "Bogo Sort",
+    timeComplexity: "O((n+1)!)",
+    spaceComplexity: "O(1)",
+    fn: bogoSort,
   },
 } satisfies Record<string, AlgorithmDef>;
 

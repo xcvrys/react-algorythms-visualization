@@ -1,15 +1,23 @@
+type Props = {
+  speed: number;
+  setSpeed: (v: number) => void;
+  length: number;
+  setLength: (v: number) => void;
+  onSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
 export default function Settings({
   speed,
   setSpeed,
   length,
   setLength,
-  searchInput,
-}: SettingsProps) {
+  onSearch,
+}: Props) {
   return (
     <section className="inputSettings">
       <div className="inputRanges">
         <div className="inputRangesItem">
-          <label htmlFor="speed">Speed(ms)</label>
+          <label htmlFor="speed">Speed (ms)</label>
           <div>
             <span>10</span>
             <input
@@ -25,11 +33,11 @@ export default function Settings({
           </div>
         </div>
         <div className="inputRangesItem">
-          <label htmlFor="arrLenght">Array Length</label>
+          <label htmlFor="arrLength">Array Length</label>
           <div>
             <span>10</span>
             <input
-              id="arrLenght"
+              id="arrLength"
               type="range"
               min="10"
               max="200"
@@ -44,7 +52,7 @@ export default function Settings({
       <div className="inputGroup">
         <svg viewBox="0 0 24 24" aria-hidden="true" className="search-icon">
           <g>
-            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z" />
           </g>
         </svg>
         <input
@@ -53,9 +61,7 @@ export default function Settings({
           type="search"
           placeholder="Search..."
           name="searchbar"
-          onChange={(e) => {
-            searchInput(e);
-          }}
+          onChange={onSearch}
         />
       </div>
     </section>
